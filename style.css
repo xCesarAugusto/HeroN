@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+        margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+        scroll-behavior: smooth;
+
+}
+
+:root {
+    font-size: 62.5%;
+    --color-text01:#fff;
+    color:var(--color-text01);
+    --color-base01:#8D4F38;
+    --color-base02:#B26447;
+    --color-base03:#D57755;
+    --color-base04:#F48861;
+--color-background:#F5EDE7;
+
+}
+
+body {
+background-color: var(--color-background);}
+
+.page {
+padding: 10rem;
+    width: min(144rem,100%);
+    margin: 10rem auto;
+
+}
+
+header {
+    z-index: 1;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background-color: var(--color-base01);
+    
+}
+
+header .logo {
+    font-size: 3.2rem;
+    border: 0.4rem solid rgba(255, 255, 255, 0.791);
+padding: 0.4rem;
+}
+
+header a {
+    transition: .8s;
+}
+
+header a:hover {
+color: var(--color-base04);
+}
+
+
+header .logo a {
+   text-decoration: none;
+   color: var(--color-text01);
+
+}
+
+nav {
+    display: flex;
+    gap:2rem;
+
+}
+
+nav a {
+    font-size: 2rem;
+color: var(--color-text01);
+}
+
+main {
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.presentation-title {
+    margin-bottom: 1rem;
+}
+
+.home h1 {
+    text-align: center;
+    font-size: 5.2rem;
+    color: var(--color-base02);
+    }
+
+    .home p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    p {
+        text-align: justify;
+        font-size: 2.3rem;
+color: var(--color-base01);
+        }
+
+
+
+
+      
+        .prentation-text {
+            display: flex;
+align-items: center; 
+justify-content: space-around;
+border: 0.4rem solid var(--color-base02);
+padding: 2rem;
+
+       }
+
+       .sobre {
+        padding: 2rem;
+        text-align: center;
+        margin-top: 6rem;
+        border: 0.4rem solid var(--color-base02);
+
+       }
+
+    h2 {
+        text-align: center;
+        font-size: 4.2rem;
+        color: var(--color-base02);
+
+       }
+
+
+       .sobre p {
+        width: 100%;
+        line-height: 4rem;
+       }
+
+       .galeria {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+       }
+
+       .fotos h2 {
+        margin: 6rem 0;
+
+       }
+
+       .image img {
+        border: 0.4rem solid var(--color-base04);
+
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        transition: all .3s ease-out;    
+    z-index: 0;   }
+
+       .image img:hover {
+        filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+        transform: scale(1.01) rotate(-2deg);
+       }
+
+
+       footer {
+        z-index: 1;
+        font-weight: bold;
+        position: fixed;
+        bottom: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 6rem;
+        background-color: var(--color-base01);
+        font-size: 2rem;
+       }
+
+       @media (max-width:900px) {
+  p {
+    font-size: 1.5rem;
+}
+
+header {
+    height: 5.5rem;
+
+}
+
+header .logo {
+    font-size: 1.8rem; }
+
+    nav a {
+        font-size: 1.6rem;
+    }
+
+
+.home h1 {
+    font-size: 3rem;
+
+}
+
+h2 {
+    font-size: 2.5rem;
+
+}
+
+.sobre p {
+    line-height: 3rem;
+   }
+
+.page {
+    padding: 8rem;
+        margin: 3rem auto;
+    
+    }
+
+.prentation-text {
+padding: 7rem;
+justify-content: space-between;
+
+}
+
+.prentation-text img {
+   width: 70%;
+
+}
+
+       }
+
+       @media (max-width:520px) {
+  
+        
+
+        header .logo {
+            border: 0.4rem solid rgba(255, 255, 255, 0.791);
+        padding: 0.4rem;
+        }
+        
+        .home h1 {
+            font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.8rem;
+  
+            }
+
+            .home img {
+                display: none;
+            }
+
+        
+
+            .prentation-text {
+    padding: 1.8rem;
+    
+           }
+            
+
+            .page {
+                padding: 1rem;
+                 margin: 9rem auto;
+                
+                }
+     
+                .galeria {
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                   }
+                  
+
+                   footer {
+                    font-size: 1.5rem;
+                   }
+
+
+                   @media (max-width:410px) {
+                    header .logo {
+                        font-size: 1.4rem;
+                    padding: 0.4rem;
+                    }
+
+                    nav {
+                        gap:1.1rem;
+                    
+                    }
+                    
+                    .home p {
+                        margin-top: 0;
+                        padding: 1rem;
+                    }
+            
+                    .home h1 {
+                        font-size: 2rem;
+                        }
+
+            
+            
+                        nav a {
+                            font-size: 1.4rem;
+                        }
+                 
+                            .galeria {
+                                display: grid;
+                                grid-template-columns: repeat(1,1fr);
+                               }
+            
+                               .fotos h2 {
+                                margin: 2rem 0;
+                        
+                               }
+
+                   }
+                   
+            
+
+            
+
+  }
+
